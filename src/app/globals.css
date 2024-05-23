@@ -2,8 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'CircularStdBook';
+  src: url('../app/fonts/CircularStdBook.eot');
+  src: url('../app/fonts/CircularStdBook.eot') format('embedded-opentype'),
+       url('../app/fonts/CircularStdBook.woff2') format('woff2'),
+       url('../app/fonts/CircularStdBook.woff') format('woff'),
+       url('../app/fonts/CircularStdBook.ttf') format('truetype'),
+       url('../app/fonts/CircularStdBook.svg#CircularStdBook') format('svg');
+}
+
+@font-face {
+  font-family: 'CircularStdBold';
+  src: url('../app/fonts/CircularStdBold.eot');
+  src: url('../app/fonts/CircularStdBold.eot') format('embedded-opentype'),
+       url('../app/fonts/CircularStdBold.woff2') format('woff2'),
+       url('../app/fonts/CircularStdBold.woff') format('woff'),
+       url('../app/fonts/CircularStdBold.ttf') format('truetype'),
+       url('../app/fonts/CircularStdBold.svg#CircularStdBold') format('svg');
+}
+
+@font-face {
+  font-family: 'CircularStdMedium';
+  src: url('../app/fonts/CircularStdMedium.eot');
+  src: url('../app/fonts/CircularStdMedium.eot') format('embedded-opentype'),
+       url('../app/fonts/CircularStdMedium.woff2') format('woff2'),
+       url('../app/fonts/CircularStdMedium.woff') format('woff'),
+       url('../app/fonts/CircularStdMedium.ttf') format('truetype'),
+       url('../app/fonts/CircularStdMedium.svg#CircularStdMedium') format('svg');
+}
+
+
+.CircularStdBook-normal{
+  font-family: 'CircularStdBook';
+  font-weight: 400;
+}
+
+.CircularStdBold{
+  font-family: 'CircularStdBold';
+
+}
+
+.CircularStdMedium{
+  font-family: 'CircularStdMedium';
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -12,18 +57,13 @@
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-end-rgb: 255, 255, 255;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #000;
+  background:#fff;
 }
 
 @layer utilities {
@@ -31,3 +71,208 @@ body {
     text-wrap: balance;
   }
 }
+
+.tab-con:before{
+  position: absolute;
+  left: -33px;
+  bottom: -111px;
+  content: "";
+  background: url(/_next/static/media/crcle-round.d2d2848f.png) no-repeat 0 0;
+    background-size: auto;
+  width: 188px;
+  height: 188px;
+  z-index: -1;
+  background-size: 68%;
+}
+
+.pricing_tag {
+  background: rgb(29,73,69);
+  background: radial-gradient(circle,rgba(29,73,69,1) 0%,rgba(0,12,44,1) 52%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'CircularStdBold';
+  font-size: 15px;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: -80px;
+  z-index: 9;
+}
+
+.outrank {
+  padding: 100px 0;
+  background: rgb(29,73,69);
+  background: radial-gradient(circle,rgba(29,73,69,1) 0%,rgba(0,12,44,1) 52%);
+  z-index: 9;
+}
+
+.outrank .round-main {
+  display: flex;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding: 0 50px !important;
+}
+
+.outrank .round-main .round-part {
+  padding: 0;
+  position: relative;
+  transform: scale(1.07);
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  border-radius: 100%;
+  border: dashed 1px #fff;
+}
+
+.outrank .round-main .round-part::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #52B95D;
+  border-radius: 100%;
+  right: -20px;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  z-index: 9;
+}
+
+.outrank .round-main .round-part .round-part-inner {
+  position: relative;
+}
+
+.outrank .round-main .round-part .round-part-inner .link-building-main-text {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 348px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 55px;
+}
+
+
+.outrank .round-main .round-part .round-part-inner::before {
+  content: '';
+  display: block;
+   width: 100%;
+   padding-top: 100%;
+
+}
+
+.outrank .round-main .round-part .round-part-inner .link-building-main-text img {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 25px;
+}
+
+.outrank .round-main .round-part .round-part-inner::after {
+  content: '';
+  border-bottom: 1px dashed #fff;
+  width: 28px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.outrank .round-main .round-part:last-child .round-part-inner::after{display: none;}
+.outrank .round-main .round-part:last-child:before{
+  display: none;
+}
+
+.blog_info{
+  padding: 100px 0;
+  background: rgb(29,73,69);
+  background: radial-gradient(circle,rgba(29,73,69,1) 0%,rgba(0,12,44,1) 52%);
+}
+
+.blog_info .blog-box::after {
+  content: '';
+  height: 170px;
+  width: 170px;
+  z-index: 1;
+  position: absolute;
+  right: -85px;
+  bottom: 0;
+  background: #52B95D;
+  clip-path: polygon(100% 0,0% 100%,100% 100%);
+  border-radius: 0;
+  transition: all .5s ease;
+}
+
+.picture::after {
+  content: '';
+  background: url(../../public/shape-1.svg);
+  position: absolute;
+  width: 286px;
+  height: 172px;
+  left: auto;
+  right: -20px;
+  bottom: 20px;
+  z-index: -1;
+}
+
+.Testi-img{
+  width: 342px;
+  height: 342px;
+  background: #52B95D;
+  border-radius: 180px 0px 180px 180px;
+  padding: 50px 0 0 0;
+  overflow: hidden;
+}
+
+
+
+.Testi-img:before {
+  content: '';
+  position: absolute;
+  background: url(../../public/pattern.svg);
+    background-repeat: repeat;
+  background-repeat: no-repeat;
+  width: 187px;
+  height: 187px;
+  right: auto;
+  left: -40px;
+  top: 0;
+  z-index: -1;
+}
+footer{
+  background: rgb(29,73,69);
+  background: radial-gradient(circle,rgba(29,73,69,1) 0%,rgba(0,12,44,1) 52%);
+  padding: 96px 0 20px;
+  margin-top: 40px;
+}
+
+.meet-experts{
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.meet-experts::after {
+  content: '';
+  position: absolute;
+  background: url(../../public/line-1.png);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90px;
+
+}
+
+
+/* .meet-experts:before{
+  background: url();
+} */
