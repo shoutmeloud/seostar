@@ -9,37 +9,37 @@ const Tabs = () => {
   return (
     <div className="w-full mx-auto mt-10">
       {/* Tab Headers */}
-      <div className="flex justify-between  text-center">
+      <div className="md:flex block justify-between  text-center">
         <button
-          className={`py-2 px-16 rounded-md  shadow-lg ${activeTab === "tab1" ? "border-t-8 border-[#52B95D] text-blue-500 bg-[#E9F8EB] shadow-none" : "text-gray-500"}`}
+          className={`md:py-2 xl:px-16 lmd:px-8 xxl:px-8 CircularStdMedium rounded-md xxl:w-[18%] xl:w-auto md:w-[18%] xxl:text-[21px] w-full shadow-lg py-4 ${activeTab === "tab1" ? "border-t-8 border-[#52B95D] text-black bg-[#E9F8EB] shadow-none" : "text-gray-500"}`}
           onClick={() => setActiveTab("tab1")}
         >
            <Image src={SeoIcon} alt="Seo-icon" className="mx-auto text-center mb-2" priority />
            Search Engine <br></br> Optimization (SEO)
         </button>
         <button
-          className={`py-2 px-16 rounded-md shadow-lg ${activeTab === "tab2" ? "border-t-8 border-[#52B95D] text-blue-500 bg-[#E9F8EB]" : "text-gray-500"}`}
+          className={`md:py-2 xl:px-16 lmd:px-8 xxl:px-8 CircularStdMedium rounded-md xxl:w-[18%] xl:w-auto md:w-[18%]  xxl:text-[21px] shadow-lg w-full py-4 ${activeTab === "tab2" ? "border-t-8 border-[#52B95D] text-black bg-[#E9F8EB]" : "text-gray-500"}`}
           onClick={() => setActiveTab("tab2")}
         >
          <Image src={Digital} alt="Seo-icon" className="mx-auto text-center mb-2" priority />
            Digital PR
         </button>
         <button
-          className={`py-2 px-16 rounded-md  shadow-lg ${activeTab === "tab3" ? "border-t-8 border-[#52B95D] text-blue-500 bg-[#E9F8EB]" : "text-gray-500"}`}
+          className={`md:py-2 xl:px-16 lmd:px-8 xxl:px-8 CircularStdMedium rounded-md xxl:w-[18%] xl:w-auto md:w-[18%]  xxl:text-[21px] w-full shadow-lg py-4 ${activeTab === "tab3" ? "border-t-8 border-[#52B95D] text-black bg-[#E9F8EB]" : "text-gray-500"}`}
           onClick={() => setActiveTab("tab3")}
         >
          <Image src={SeoContent} alt="Seo-icon" className="mx-auto text-center mb-2" priority />
            SEO Content
         </button>
         <button
-          className={`py-2 px-16 rounded-md  shadow-lg ${activeTab === "tab4" ? "border-t-8 border-[#52B95D] text-blue-500 bg-[#E9F8EB]" : "text-gray-500"}`}
+          className={`md:py-2 xl:px-16 lmd:px-8 xxl:px-8 CircularStdMedium rounded-md xxl:w-[18%] xl:w-auto md:w-[18%]  xxl:text-[21px] w-full shadow-lg py-4 ${activeTab === "tab4" ? "border-t-8 border-[#52B95D] text-black bg-[#E9F8EB]" : "text-gray-500"}`}
           onClick={() => setActiveTab("tab4")}
         >
          <Image src={TechnicalSeo} alt="Seo-icon" className="mx-auto text-center mb-2" priority />
          Technical SEO
         </button>
         <button
-          className={`py-2 px-16 rounded-md  shadow-lg ${activeTab === "tab5" ? "border-b-2 border-blue-500 text-blue-500 bg-[#E9F8EB]" : "text-gray-500"}`}
+          className={`md:py-2 xl:px-16 lmd:px-8 xxl:px-8 CircularStdMedium rounded-md xxl:w-[18%] xl:w-auto md:w-[18%]  xxl:text-[21px] shadow-lg w-full py-4 ${activeTab === "tab5" ? "border-b-2 border-blue-500 text-black bg-[#E9F8EB]" : "text-gray-500"}`}
           onClick={() => setActiveTab("tab5")}
         >
          <Image src={LocalSeo} alt="Seo-icon" className="mx-auto text-center mb-2" priority />
@@ -48,10 +48,10 @@ const Tabs = () => {
       </div>
 
       {/* Tab Content */}
-      <div className="bg-[#E9F8EB] p-[100px] mt-5 rounded-[10px] shadow-xl mb-4 relative tab-con">
-        {activeTab === "tab1" && <div className="flex justify-between">
-         <div className="w-1/2"><Image src={TabImage} alt="Seo-icon" className="mx-auto text-center mb-2" priority /></div>
-         <div className="w-1/2 ps-5">
+      <div className="bg-[#E9F8EB] lmd:py-[70px] py-[30px] lmd:px-[70px] px-[30px] mt-5 rounded-[10px] shadow-xl mb-4 relative tab-con">
+        {activeTab === "tab1" && <div className="lmd:flex block justify-between">
+         <div className="lmd:w-1/2 w-full"><Image src={TabImage} alt="Seo-icon" className="mx-auto text-center mb-2" priority /></div>
+         <div className="lmd:w-1/2 w-full md:ps-5 ps-0">
            <h2 className="CircularStdMedium text-[#52B95D] text-[41px] leading-[45px]">Digital PR</h2>
            <p className="text-[17px] leading-[25px] CircularStdBook-normal pt-3 text-[#515151]">
            Our Digital PR services help optimize your brand&apos;s digital footprint.</p>

@@ -276,3 +276,61 @@ footer{
 /* .meet-experts:before{
   background: url();
 } */
+
+
+@media screen and (max-width: 991px) {
+ .container{
+  padding: 0 20px;
+ }
+
+ .outrank .round-main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.outrank .round-main .round-part{
+  width: 50%;
+}
+
+.outrank .round-main .round-part+.round-part:before{
+  display: none;
+}
+
+.outrank .round-main .round-part+.round-part .round-part-inner::after{
+  display: none;
+}
+
+.meet-experts p br, .experts-seo p br{
+  display: none;
+}
+
+.Testi-img{
+  margin: 0 auto 30px;
+  display: table;
+}
+
+.Testi-img::before{
+  left: 40px;
+}
+
+/* .outrank .round-main .round-part::before{
+  display: none;
+} */
+
+}
+
+@media screen and (max-width: 740px) {
+  .outrank .round-main{
+    display: block;
+  }
+  .outrank .round-main .round-part {
+    width: 100%;
+  }
+  .outrank .round-main{
+    padding: 0 10px !important;
+  }
+  .Testi-img {
+    width: 250px;
+    height: 250px;
+  }
+}
