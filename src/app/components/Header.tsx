@@ -32,7 +32,7 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-      <header className={`flex text-white justify-between items-center py-[25px] w-full z-50 bg-transparent ${isScrolled ? 'fixed top-0 left-0 bg-[#000c2c]' : 'absolute'}`}>
+      <header className={`flex text-white justify-between items-center py-[25px] w-full z-50  ${isScrolled ? 'fixed top-0 left-0 bg-[#000c2c]' : 'absolute'}`}>
             <div className="container mx-auto flex justify-between items-center">
                 <div className="logo lmd:w-auto md:w-[120px]">
                     <Image src={HeaderLogo} alt="Gradient-Tick" />
